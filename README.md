@@ -26,11 +26,11 @@ Table of Contents
 
 ---
 
-Project Overview
+## Project Overview
 
 The aim of this project is to examine the relationship between lifestyle choices and academic performance, using students' GPA as a measurable outcome. By building and evaluating predictive models, we hope to uncover which lifestyle factors most significantly influence GPA. Such insights can be valuable for educational institutions, advisors, and students themselves in making informed decisions to optimize academic performance.
 
-Dataset Description
+## Dataset Description
 
 The dataset comprises several lifestyle factors and the GPA of each student. Key features include:
 
@@ -42,7 +42,7 @@ The dataset comprises several lifestyle factors and the GPA of each student. Key
 - Stress Level: Self-reported stress level (Low, Moderate, High), converted to numerical format for modeling.
 - GPA: The target variable, representing the students' GPA.
 
-Project Structure
+## Project Structure
 
 1. Data Loading and Exploration:
 
@@ -75,7 +75,7 @@ Project Structure
 6. Model Interpretation with SHAP:
    - Use SHAP values to explain the importance of each feature, helping interpret the model's predictions.
 
-Prerequisites
+## Prerequisites
 
 Ensure you have Python installed, along with the following libraries:
 
@@ -83,24 +83,26 @@ Ensure you have Python installed, along with the following libraries:
 pip install pandas numpy matplotlib seaborn scikit-learn xgboost shap
 ```
 
-Getting Started
+## Getting Started
 
-Clone the Repository
-Clone this repository to your local machine to get started:
+## Clone the Repository
+
+## Clone this repository to your local machine to get started:
 
 ```bash
 git clone https://github.com/Shelton-beep/predicting-gpa-using-lifestyle-factors.git
 cd predicting-gpa-using-lifestyle-factors
 ```
 
-Run the Notebook
+## Run the Notebook
+
 To run the project, open and execute each cell in the `predicting-gpa-using-lifestyle-factors.ipynb` notebook. It contains detailed code and explanations of each step.
 
 ---
 
-Project Workflow
+## Project Workflow
 
-1.  Data Loading and Preprocessing
+## 1. Data Loading and Preprocessing
 
 In the first step, we load the dataset and perform basic data preprocessing:
 
@@ -120,7 +122,7 @@ scaler = StandardScaler()
 data_scaled = scaler.fit_transform(data.drop(columns=['GPA']))
 ```
 
-2.  Exploratory Data Analysis (EDA)
+## 2. Exploratory Data Analysis (EDA)
 
 EDA helps us understand the dataset and discover relationships between variables. We visualize the distribution of GPA and examine correlations:
 
@@ -136,7 +138,7 @@ plt.title("Correlation Matrix")
 plt.show()
 ```
 
-3.  Model Training and Evaluation
+## 3. Model Training and Evaluation
 
 We train various regression models and evaluate them using cross-validation. Here’s an example with Linear Regression:
 
@@ -155,7 +157,7 @@ Model Evaluation Metrics:
 - Mean Absolute Error (MAE): Average absolute difference between predicted and actual GPA.
 - Mean Squared Error (MSE): Average squared difference, penalizing larger errors.
 
-4.  Hyperparameter Tuning
+## 4. Hyperparameter Tuning
 
 For the best-performing model (e.g., Random Forest), we use hyperparameter tuning to enhance accuracy.
 
@@ -171,7 +173,7 @@ grid_search.fit(X_train, y_train)
 print("Best Hyperparameters:", grid_search.best_params_)
 ```
 
-5.  Model Interpretation with SHAP
+## 5. Model Interpretation with SHAP
 
 Using SHAP values, we can interpret the impact of each lifestyle factor on GPA predictions:
 
@@ -184,7 +186,7 @@ shap.summary_plot(shap_values, X_test, feature_names=X.columns)
 
 ---
 
-Results
+## Results
 
 The table below summarizes the performance of each model based on cross-validation scores:
 
@@ -197,12 +199,12 @@ The table below summarizes the performance of each model based on cross-validati
 | Gradient Boosting | 0.XX     | X.XX                | X.XX               |
 | XGBoost           | 0.XX     | X.XX                | X.XX               |
 
-Insights
+# Insights
 
 - Key Predictors: Factors such as study hours, stress level, and sleep hours show significant influence on GPA.
 - Model Interpretability: SHAP values reveal which lifestyle choices are most impactful, helping students focus on areas for improvement.
 
-Future Enhancements
+## Future Enhancements
 
 Future versions of this project could include:
 
@@ -210,7 +212,7 @@ Future versions of this project could include:
 - Experimenting with more complex models or neural networks.
 - Using more sophisticated hyperparameter tuning techniques like Bayesian Optimization.
 
-Contributing
+## Contributing
 
 Contributions are welcome! To contribute:
 
@@ -220,10 +222,10 @@ Contributions are welcome! To contribute:
 4. Push to the branch (`git push origin feature/YourFeature`).
 5. Open a pull request.
 
-License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Contact
+## Contact
 
 For questions or suggestions, please feel free to reach out or open an issue.
